@@ -31,6 +31,13 @@ const routes = [
         component: () => import('@/view/RoomPage.vue'),
         meta: { requiresAuth: true }
     },
+    {
+        path: '/stage_1',
+        name: 'stage_1Page',
+        component: () => import('@/view/WorkStage_1.vue'),
+        meta: { requiresAuth: true }
+
+    }
 ];
 
 const router = createRouter({
