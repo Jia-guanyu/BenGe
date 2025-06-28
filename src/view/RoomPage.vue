@@ -1,4 +1,7 @@
 <template>
+  <div v-if="stage === -1">
+    <WorkStage_1 :stage="stage" />
+  </div>
   <div v-if="stage == 0">
     <FrameworkDesignStage :stage="stage" @updateStage="updateStage"/>
   </div>
@@ -10,8 +13,10 @@
 
 <script setup>
 import { ref } from "vue";
+import WorkStage_1 from "@/components/cooperate-stages/WorkStage_1.vue";
 import FrameworkDesignStage from "@/components/cooperate-stages/FrameworkDesignStage.vue";
 import CompleteScriptStage from "@/components/cooperate-stages/CompleteScriptStage.vue";
+
 // import NarrativeWorkspace from "@/components/roles/NarrativeWorkspace.vue";
 
 const stage = ref(0);
